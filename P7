@@ -32,5 +32,14 @@ int main()
 				break;
 			}
 		}
+		if(prime(i+2))
+		{
+			s++;
+			if(s==n)
+			{
+				cout<<i+2<<endl;
+				break;
+			}
+		}
 	}
 }
