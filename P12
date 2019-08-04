@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{	
+	int t;
+	cin>>t;
+	int i=1;
+	long n;
+	while(true)
+	{
+		n=i*(i+1)/2;
+		int s=2;
+		for(long j=2;j*j<=n;j++)
+		{
+			if(n%j==0)
+			s+=2;
+		}
+		if(s>t)
+		{
+			cout<<n<<endl;
+			break;
+		}
+		i++;
+	}
+}
