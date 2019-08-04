@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{	
+	long long t;
+	cin>>t;
+	long long n;
+	for(long long i=1;;i++)
+	{
+		long long c=i*i;
+		for(long long j=1;j<i;j++)
+		{
+			long long b=j*j;
+			long long a=(long long)sqrt(c-b);
+			if(a*a+b==c && i+j+a==t)
+			{
+				cout<<a*i*j<<endl;
+				return 0;
+			}
+		}
+	}
+}
