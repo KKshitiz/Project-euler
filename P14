@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int colatz(long long n)
+{
+	int s=1;
+	while(n!=1)
+	{
+		if(n%2==0)
+		n/=2;
+		else
+		n=3*n+1;
+		s++;
+	}
+	return s;
+}
+int main()
+{
+	long long g=0,n=0,i;
+	cin >>i;
+	while(i>1)
+	{
+		if(colatz(i)>g)
+		{
+			g=colatz(i);
+			n=i;
+		}
+		i--;
+	}
+	cout<<n<<endl;
+}
